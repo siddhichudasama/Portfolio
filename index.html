@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siddhi Chudasama | Android Developer &amp; UI/UX Designer</title>
-<meta name="description" content="Portfolio of Siddhi Chudasama — Android Developer, UI/UX Designer &amp; Cybersecurity Researcher building secure, scalable mobile applications.">
+<title>Siddhi Chudasama | Software Engineer &amp; Android Developer</title>
+<meta name="description" content="Portfolio of Siddhi Chudasama — Software Engineer, Android Developer &amp; UI/UX Designer building secure, scalable mobile and backend applications.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,32 +17,32 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 :root {
-  /* Gold Palette */
-  --gold:        #c9921a;
-  --gold-lt:     #e8b84b;
-  --gold-br:     #f5d06e;
-  --gold-pale:   #fce9a8;
-  --gold-deep:   #7a5010;
-  --gold-shine:  #ffd700;
+  /* Neon Blue → Purple → Pink Palette */
+  --gold:        #2563eb;
+  --gold-lt:     #38bdf8;
+  --gold-br:     #2dd4bf;
+  --gold-pale:   #a7f3ec;
+  --gold-deep:   #0f2847;
+  --gold-shine:  #6366f1;
 
   /* Glow */
-  --glow-a:  rgba(201, 146, 26, 0.18);
-  --glow-b:  rgba(245, 208, 110, 0.10);
+  --glow-a:  rgba(37, 99, 235, 0.18);
+  --glow-b:  rgba(45, 212, 191, 0.14);
 
   /* Backgrounds */
-  --bg:   #07060f;
-  --bg-1: #0d0b1a;
-  --bg-2: #13112a;
+  --bg:   #070b14;
+  --bg-1: #0c1420;
+  --bg-2: #121b2c;
 
   /* Text */
-  --txt:  #f4edda;
-  --mut:  #7a7060;
-  --dim:  #3e3620;
+  --txt:  #eef4fb;
+  --mut:  #8292a8;
+  --dim:  #27384a;
 
   /* Borders */
-  --b0: rgba(201, 146, 26, 0.13);
-  --b1: rgba(201, 146, 26, 0.33);
-  --b2: rgba(201, 146, 26, 0.70);
+  --b0: rgba(37, 99, 235, 0.16);
+  --b1: rgba(37, 99, 235, 0.38);
+  --b2: rgba(37, 99, 235, 0.75);
 
   /* Fonts */
   --CG: 'Cormorant Garamond', Georgia, serif;
@@ -61,7 +61,7 @@ body {
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--gold-lt), var(--gold), var(--gold-deep));
+  background: linear-gradient(180deg, var(--gold-shine), var(--gold-lt), var(--gold), var(--gold-deep));
   border-radius: 2px;
 }
 
@@ -75,13 +75,13 @@ body::before {
   content: '';
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image:
-    linear-gradient(rgba(201,146,26,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,146,26,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(37,99,235,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61,123,255,0.045) 1px, transparent 1px);
   background-size: 55px 55px;
 }
 
 /* ================================================================
-   LOADER — same as reference: logo + text + bar
+   LOADER — logo + text + bar
 ================================================================ */
 #loader {
   position: fixed; inset: 0; z-index: 9999;
@@ -95,13 +95,13 @@ body::before {
 .loader-logo {
   font-family: var(--CG); font-size: 6rem; font-weight: 700; font-style: italic;
   letter-spacing: 0.06em;
-  background: linear-gradient(135deg, var(--gold-lt), var(--gold), var(--gold-br), var(--gold-pale));
+  background: linear-gradient(135deg, var(--gold-shine), var(--gold-lt), var(--gold-br), var(--gold-pale));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   animation: loader-pulse 1.5s ease-in-out infinite;
 }
 @keyframes loader-pulse {
-  0%, 100% { filter: drop-shadow(0 0 10px rgba(201,146,26,0.3)); }
-  50%       { filter: drop-shadow(0 0 40px rgba(245,208,110,0.9)); }
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(37,99,235,0.35)); }
+  50%       { filter: drop-shadow(0 0 40px rgba(255,95,200,0.9)); }
 }
 .loader-text {
   font-family: var(--SM); font-size: 0.6rem;
@@ -109,23 +109,23 @@ body::before {
 }
 .loader-bar-wrap {
   width: 200px; height: 2px;
-  background: rgba(201,146,26,0.12); border-radius: 1px; overflow: hidden;
+  background: rgba(37,99,235,0.14); border-radius: 1px; overflow: hidden;
 }
 .loader-bar {
   height: 100%; width: 0%; border-radius: 1px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold-br), var(--gold-pale));
-  box-shadow: 0 0 10px rgba(201,146,26,0.5);
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold), var(--gold-lt), var(--gold-br), var(--gold-pale));
+  box-shadow: 0 0 10px rgba(37,99,235,0.55);
   animation: loader-fill 2s ease forwards;
 }
 @keyframes loader-fill { to { width: 100%; } }
 
 /* ================================================================
-   TICKER — reference has kanji + text rolling strip
+   TICKER — kanji + text rolling strip
 ================================================================ */
 .ticker {
   position: fixed; top: 0; left: 0; right: 0; z-index: 60;
   height: 28px; overflow: hidden;
-  background: rgba(7,6,15,0.97);
+  background: rgba(9,6,21,0.97);
   border-bottom: 1px solid var(--b0);
   display: flex; align-items: center;
 }
@@ -137,7 +137,7 @@ body::before {
 .ticker-track span {
   font-family: var(--SM); font-size: 0.58rem;
   letter-spacing: 0.24em; opacity: 0.9;
-  background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold-br));
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold-lt), var(--gold-br));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 @keyframes ticker-scroll {
@@ -146,19 +146,19 @@ body::before {
 }
 
 /* ================================================================
-   NAV — reference format: RB · RISHAB  →  SC · SIDDHI
+   NAV
 ================================================================ */
 nav {
   position: fixed; top: 28px; left: 0; right: 0; z-index: 100;
   padding: 0.9rem 3.5rem;
   display: flex; align-items: center; justify-content: space-between;
-  background: rgba(7,6,15,0.82); backdrop-filter: blur(24px);
+  background: rgba(9,6,21,0.82); backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--b0);
   transition: all 0.3s ease;
 }
 nav.scrolled {
-  background: rgba(7,6,15,0.98);
-  box-shadow: 0 2px 30px rgba(201,146,26,0.07);
+  background: rgba(9,6,21,0.98);
+  box-shadow: 0 2px 30px rgba(37,99,235,0.09);
 }
 
 .nav-brand { display: flex; align-items: center; gap: 0.8rem; }
@@ -166,12 +166,12 @@ nav.scrolled {
   width: 40px; height: 40px;
   border: 1px solid var(--gold); border-radius: 2px;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(201,146,26,0.07); position: relative;
-  box-shadow: 0 0 14px rgba(201,146,26,0.16);
+  background: rgba(37,99,235,0.08); position: relative;
+  box-shadow: 0 0 14px rgba(37,99,235,0.2);
 }
 .nav-logo-box::after {
   content: ''; position: absolute; inset: -3px;
-  border: 1px solid rgba(201,146,26,0.18); border-radius: 3px;
+  border: 1px solid rgba(61,123,255,0.2); border-radius: 3px;
 }
 .nav-logo-letters {
   font-family: var(--CG); font-size: 1.1rem; font-weight: 700; font-style: italic;
@@ -198,7 +198,7 @@ nav.scrolled {
 }
 .nav-links a:hover {
   border-color: var(--b1); color: var(--gold-pale);
-  background: rgba(201,146,26,0.06);
+  background: rgba(37,99,235,0.08);
 }
 
 /* ================================================================
@@ -206,18 +206,16 @@ nav.scrolled {
 ================================================================ */
 .wrap { max-width: 1260px; margin: 0 auto; padding: 7rem 3.5rem; }
 
-/* "// professional profile" label */
 .s-label {
   font-family: var(--SM); font-size: 0.6rem;
   letter-spacing: 0.22em; text-transform: uppercase;
   display: flex; align-items: center; gap: 0.5rem;
   margin-bottom: 0.55rem;
-  background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--gold-br));
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold-lt), var(--gold-br));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .s-label::before { content: '//'; color: var(--dim); -webkit-text-fill-color: var(--dim); }
 
-/* Big section heading — huge Cormorant Garamond italic */
 .s-title {
   font-family: var(--CG);
   font-size: clamp(3rem, 5.5vw, 5rem);
@@ -225,35 +223,32 @@ nav.scrolled {
   letter-spacing: 0.02em; margin-bottom: 3.5rem; line-height: 1;
   background: linear-gradient(135deg, var(--txt) 0%, var(--gold-pale) 40%, var(--gold-lt) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 25px rgba(201,146,26,0.22));
+  filter: drop-shadow(0 0 25px rgba(37,99,235,0.25));
 }
 
-/* Sub-heading used inside sections */
 .s-subhead {
   font-family: var(--CG); font-size: 1.4rem; font-weight: 700; font-style: italic;
   background: linear-gradient(90deg, var(--gold-lt), var(--gold));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   margin-bottom: 0.9rem; padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--b0); margin-top: 2.2rem;
-  filter: drop-shadow(0 0 7px rgba(201,146,26,0.22));
+  filter: drop-shadow(0 0 7px rgba(37,99,235,0.25));
 }
 .s-subhead:first-child { margin-top: 0; }
 
-/* Body paragraph */
 .s-para {
   font-family: var(--IN); font-size: 1rem; line-height: 1.9;
   color: var(--mut); margin-bottom: 1rem;
 }
 .s-para strong { color: var(--txt); }
 
-/* Highlight box — left gold border */
 .s-box {
   border: 1px solid var(--b0); border-left: 2px solid var(--gold);
-  background: rgba(201,146,26,0.03);
+  background: rgba(37,99,235,0.04);
   padding: 1.1rem 1.4rem; border-radius: 2px; margin-bottom: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.s-box:hover { border-color: var(--b1); box-shadow: 0 0 20px rgba(201,146,26,0.07); }
+.s-box:hover { border-color: var(--b1); box-shadow: 0 0 20px rgba(37,99,235,0.09); }
 .s-box h4 {
   font-family: var(--CG); font-size: 1.05rem; font-weight: 600; font-style: italic;
   background: linear-gradient(90deg, var(--gold-lt), var(--gold-br));
@@ -263,7 +258,6 @@ nav.scrolled {
 .s-box p { font-family: var(--IN); font-size: 0.94rem; line-height: 1.75; color: var(--mut); }
 .s-box p strong { color: var(--txt); }
 
-/* Reveal on scroll */
 .reveal {
   opacity: 0; transform: translateY(28px);
   transition: opacity 0.65s ease, transform 0.65s ease;
@@ -299,19 +293,18 @@ nav.scrolled {
   gap: 4rem; align-items: center;
 }
 
-/* BADGE — same as "⚡ Microsoft Certified · Azure AI Engineer" */
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--SM); font-size: 0.62rem;
   letter-spacing: 0.16em; text-transform: uppercase;
   border: 1px solid var(--b1); padding: 0.32rem 0.95rem; border-radius: 2px;
-  background: rgba(201,146,26,0.06); margin-bottom: 1.6rem;
-  box-shadow: 0 0 14px rgba(201,146,26,0.10);
+  background: rgba(37,99,235,0.07); margin-bottom: 1.6rem;
+  box-shadow: 0 0 14px rgba(37,99,235,0.13);
 }
 .hero-badge-dot {
   width: 6px; height: 6px; border-radius: 50%;
   background: linear-gradient(135deg, var(--gold-lt), var(--gold));
-  box-shadow: 0 0 7px rgba(232,184,75,0.7);
+  box-shadow: 0 0 7px rgba(37,99,235,0.7);
   animation: badge-pulse 1.5s ease-in-out infinite;
 }
 @keyframes badge-pulse {
@@ -323,7 +316,6 @@ nav.scrolled {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
-/* GIANT NAME — same as reference "Rishabsingh / Bhadoriya" */
 .hero-name {
   font-family: var(--CG);
   letter-spacing: -0.01em; margin-bottom: 0.9rem; line-height: 0.86;
@@ -332,19 +324,18 @@ nav.scrolled {
   display: block;
   font-size: clamp(5.5rem, 11vw, 10.5rem);
   font-weight: 700; font-style: italic;
-  background: linear-gradient(135deg, #fffadc 0%, var(--gold-pale) 25%, var(--gold-lt) 60%, var(--gold) 100%);
+  background: linear-gradient(135deg, #f0f7ff 0%, var(--gold-pale) 22%, var(--gold-lt) 55%, var(--gold-shine) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 55px rgba(201,146,26,0.5));
+  filter: drop-shadow(0 0 55px rgba(37,99,235,0.55));
 }
 .hero-name-stroke {
   display: block;
   font-size: clamp(5.5rem, 11vw, 10.5rem);
   font-weight: 700; font-style: italic;
   color: transparent; -webkit-text-stroke: 1.5px var(--gold);
-  filter: drop-shadow(0 0 28px rgba(201,146,26,0.42));
+  filter: drop-shadow(0 0 28px rgba(37,99,235,0.46));
 }
 
-/* ROLE — "QA Automation Engineer" */
 .hero-role {
   font-family: var(--SM); font-size: 0.72rem;
   letter-spacing: 0.25em; text-transform: uppercase;
@@ -355,11 +346,10 @@ nav.scrolled {
 }
 .hero-role::before {
   content: ''; display: inline-block; width: 36px; height: 1px;
-  background: linear-gradient(90deg, var(--gold-lt), var(--gold));
-  box-shadow: 0 0 5px rgba(201,146,26,0.5); flex-shrink: 0;
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold));
+  box-shadow: 0 0 5px rgba(37,99,235,0.55); flex-shrink: 0;
 }
 
-/* Typed text */
 .hero-typed-wrap {
   font-family: var(--CG); font-size: 1.2rem; font-style: italic;
   color: var(--mut); margin-bottom: 1.3rem; min-height: 2rem;
@@ -368,23 +358,21 @@ nav.scrolled {
   display: inline-block; width: 2px; height: 0.95em;
   vertical-align: middle; margin-left: 2px;
   background: linear-gradient(180deg, var(--gold-lt), var(--gold));
-  box-shadow: 0 0 5px rgba(201,146,26,0.5);
+  box-shadow: 0 0 5px rgba(37,99,235,0.55);
   animation: cursor-blink 0.9s step-end infinite;
 }
 @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-/* Description */
 .hero-desc {
   font-family: var(--IN); font-size: 1.05rem; line-height: 1.88;
   color: var(--mut); max-width: 540px; margin-bottom: 1.5rem;
 }
 
-/* Mission line — "► Building quality-first..." */
 .hero-mission {
   display: flex; align-items: flex-start; gap: 0.85rem;
   padding: 0.88rem 1.1rem;
   border-left: 2px solid var(--gold);
-  background: rgba(201,146,26,0.04);
+  background: rgba(37,99,235,0.05);
   margin-bottom: 2.5rem;
 }
 .hero-mission-arrow {
@@ -399,7 +387,6 @@ nav.scrolled {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
-/* Buttons */
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
 .btn {
   font-family: var(--SM); font-size: 0.68rem;
@@ -409,13 +396,13 @@ nav.scrolled {
   border: none; display: inline-flex; align-items: center; gap: 0.5rem;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold-lt), var(--gold), var(--gold-deep));
-  color: #07060f; font-weight: 700;
-  box-shadow: 0 0 25px rgba(201,146,26,0.28);
+  background: linear-gradient(135deg, var(--gold-shine), var(--gold-lt), var(--gold), var(--gold-deep));
+  color: #eef6ff; font-weight: 700;
+  box-shadow: 0 0 25px rgba(37,99,235,0.32);
 }
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(201,146,26,0.5);
+  box-shadow: 0 12px 40px rgba(37,99,235,0.55);
   filter: brightness(1.12);
 }
 .btn-secondary {
@@ -423,12 +410,11 @@ nav.scrolled {
   border: 1px solid var(--gold);
 }
 .btn-secondary:hover {
-  background: rgba(201,146,26,0.08);
-  box-shadow: 0 0 22px rgba(201,146,26,0.25);
+  background: rgba(37,99,235,0.09);
+  box-shadow: 0 0 22px rgba(37,99,235,0.28);
   color: var(--gold-pale);
 }
 
-/* Stats */
 .hero-stats {
   display: flex; gap: 2.8rem;
   border-top: 1px solid var(--b0); padding-top: 2rem;
@@ -438,7 +424,7 @@ nav.scrolled {
   line-height: 1;
   background: linear-gradient(135deg, var(--gold-lt), var(--gold));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 12px rgba(201,146,26,0.4));
+  filter: drop-shadow(0 0 12px rgba(37,99,235,0.45));
 }
 .stat-label {
   font-family: var(--SM); font-size: 0.57rem;
@@ -446,12 +432,11 @@ nav.scrolled {
   color: var(--mut); margin-top: 0.22rem;
 }
 
-/* Kanji grid — same as reference */
 .hero-kanji {
   margin-top: 1.8rem;
   font-family: var(--SM); font-size: 0.58rem;
   letter-spacing: 0.2em; line-height: 1.9;
-  color: rgba(201,146,26,0.18);
+  color: rgba(37,99,235,0.2);
   user-select: none;
 }
 
@@ -493,7 +478,6 @@ nav.scrolled {
 }
 .info-val { color: var(--txt); }
 
-/* Skill bars */
 .skill-bars { margin-top: 2.2rem; }
 .skill-bar-item { margin-bottom: 1.2rem; }
 .skill-bar-header {
@@ -502,18 +486,18 @@ nav.scrolled {
   letter-spacing: 0.08em; color: var(--mut); margin-bottom: 0.42rem;
 }
 .skill-bar-track {
-  height: 2px; background: rgba(201,146,26,0.1);
+  height: 2px; background: rgba(37,99,235,0.12);
   border-radius: 1px; overflow: hidden;
 }
 .skill-bar-fill {
   height: 100%; width: 0%; border-radius: 1px;
   transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: linear-gradient(90deg, var(--gold-lt), var(--gold), var(--gold-br));
-  box-shadow: 0 0 8px rgba(201,146,26,0.45);
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold-lt), var(--gold), var(--gold-br));
+  box-shadow: 0 0 8px rgba(37,99,235,0.5);
 }
 
 /* ================================================================
-   SKILLS GRID — 6 cards same as reference
+   SKILLS GRID
 ================================================================ */
 .skills-grid {
   display: grid;
@@ -528,51 +512,51 @@ nav.scrolled {
 }
 .skill-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-lt), var(--gold), var(--gold-br), transparent);
+  background: linear-gradient(90deg, transparent, var(--gold-shine), var(--gold), var(--gold-br), transparent);
   opacity: 0; transition: opacity 0.35s ease;
 }
-.skill-card:hover { border-color: var(--b2); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(201,146,26,0.09); }
+.skill-card:hover { border-color: var(--b2); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(37,99,235,0.11); }
 .skill-card:hover::before { opacity: 1; }
 
 .skill-card-icon {
   font-size: 1.75rem; display: block; margin-bottom: 1rem;
-  filter: drop-shadow(0 0 10px rgba(201,146,26,0.55));
+  filter: drop-shadow(0 0 10px rgba(37,99,235,0.6));
 }
 .skill-card-title {
   font-family: var(--CG); font-size: 1.15rem; font-weight: 700; font-style: italic;
   background: linear-gradient(90deg, var(--gold-lt), var(--gold));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   margin-bottom: 0.42rem; padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(201,146,26,0.22);
-  filter: drop-shadow(0 0 5px rgba(201,146,26,0.35));
+  border-bottom: 1px solid rgba(37,99,235,0.24);
+  filter: drop-shadow(0 0 5px rgba(37,99,235,0.38));
 }
 .skill-card-desc {
   font-family: var(--IN); font-size: 0.84rem;
-  color: #c8a860; margin-bottom: 0.9rem; line-height: 1.6;
+  color: #a8bdd4; margin-bottom: 0.9rem; line-height: 1.6;
 }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .skill-tag {
   font-family: var(--SM); font-size: 0.62rem;
   letter-spacing: 0.05em; font-weight: 700;
-  color: #f0d890; border: 1px solid rgba(201,146,26,0.38);
+  color: #cdeee8; border: 1px solid rgba(37,99,235,0.4);
   padding: 0.26rem 0.65rem; border-radius: 2px;
-  background: rgba(201,146,26,0.09);
+  background: rgba(37,99,235,0.1);
   transition: all 0.22s ease;
 }
 .skill-tag:hover {
   border-color: var(--gold-lt); color: #fff;
-  background: rgba(201,146,26,0.2); box-shadow: 0 0 10px rgba(201,146,26,0.28);
+  background: rgba(37,99,235,0.22); box-shadow: 0 0 10px rgba(37,99,235,0.3);
 }
 
 /* ================================================================
-   EXPERIENCE TIMELINE — same as reference
+   EXPERIENCE TIMELINE
 ================================================================ */
 #experience { background: var(--bg-1); border-top: 1px solid var(--b0); border-bottom: 1px solid var(--b0); }
 
 .timeline { position: relative; padding-left: 2.5rem; }
 .timeline::before {
   content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
-  background: linear-gradient(180deg, var(--gold-lt), var(--gold), transparent);
+  background: linear-gradient(180deg, var(--gold-shine), var(--gold), transparent);
 }
 .timeline-item { position: relative; padding: 0 0 3.5rem 2.2rem; }
 .timeline-item:last-child { padding-bottom: 0; }
@@ -580,7 +564,7 @@ nav.scrolled {
   content: ''; position: absolute; left: -2.7rem; top: 6px;
   width: 12px; height: 12px; border-radius: 50%;
   border: 2px solid var(--gold); background: var(--bg);
-  box-shadow: 0 0 14px rgba(201,146,26,0.55);
+  box-shadow: 0 0 14px rgba(37,99,235,0.6);
 }
 
 .tl-date {
@@ -594,8 +578,8 @@ nav.scrolled {
   display: inline-block;
   font-family: var(--SM); font-size: 0.57rem;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--gold-br); border: 1px solid rgba(201,146,26,0.28);
-  background: rgba(201,146,26,0.07);
+  color: var(--gold-br); border: 1px solid rgba(37,99,235,0.3);
+  background: rgba(37,99,235,0.08);
   padding: 0.18rem 0.65rem; border-radius: 2px; margin-bottom: 0.65rem;
 }
 .tl-role {
@@ -615,9 +599,9 @@ nav.scrolled {
 .tl-list { list-style: none; }
 .tl-list li {
   font-family: var(--IN); font-size: 0.95rem; line-height: 1.85;
-  color: #b09060;
+  color: #a8bdd4;
   padding: 0.32rem 0 0.32rem 1.4rem;
-  position: relative; border-bottom: 1px solid rgba(201,146,26,0.04);
+  position: relative; border-bottom: 1px solid rgba(37,99,235,0.05);
 }
 .tl-list li:last-child { border-bottom: none; }
 .tl-list li::before {
@@ -628,7 +612,7 @@ nav.scrolled {
 .tl-list li strong { color: var(--txt); }
 
 /* ================================================================
-   PROJECTS GRID — same card structure as reference
+   PROJECTS GRID
 ================================================================ */
 #projects { background: var(--bg-1); border-top: 1px solid var(--b0); border-bottom: 1px solid var(--b0); }
 
@@ -642,13 +626,13 @@ nav.scrolled {
   overflow: hidden; display: flex; flex-direction: column;
   transition: border-color 0.32s ease, transform 0.32s ease, box-shadow 0.32s ease;
 }
-.project-card:hover { border-color: var(--b2); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(201,146,26,0.09); }
+.project-card:hover { border-color: var(--b2); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(37,99,235,0.11); }
 .project-card:hover .project-bar { width: 100%; }
 
 .project-bar {
   height: 1px; width: 0%; transition: width 0.45s ease;
-  background: linear-gradient(90deg, var(--gold-lt), var(--gold), var(--gold-br), var(--gold-pale));
-  box-shadow: 0 0 6px rgba(201,146,26,0.4);
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold-lt), var(--gold), var(--gold-br), var(--gold-pale));
+  box-shadow: 0 0 6px rgba(37,99,235,0.45);
 }
 .project-body { padding: 1.8rem 1.8rem 0; flex: 1; }
 .project-num {
@@ -660,16 +644,16 @@ nav.scrolled {
   display: inline-flex; align-items: center; gap: 0.35rem;
   font-family: var(--SM); font-size: 0.53rem;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--gold-br); background: rgba(201,146,26,0.08);
-  border: 1px solid rgba(201,146,26,0.22);
+  color: var(--gold-br); background: rgba(37,99,235,0.09);
+  border: 1px solid rgba(37,99,235,0.24);
   padding: 0.2rem 0.62rem; border-radius: 2px; margin-bottom: 0.9rem;
 }
 .project-status-done {
   display: inline-flex; align-items: center; gap: 0.35rem;
   font-family: var(--SM); font-size: 0.53rem;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--gold-pale); background: rgba(252,233,168,0.08);
-  border: 1px solid rgba(252,233,168,0.22);
+  color: var(--gold-pale); background: rgba(45,212,191,0.09);
+  border: 1px solid rgba(45,212,191,0.24);
   padding: 0.2rem 0.62rem; border-radius: 2px; margin-bottom: 0.9rem;
 }
 .status-dot {
@@ -692,13 +676,13 @@ nav.scrolled {
 }
 .project-desc {
   font-family: var(--IN); font-size: 0.93rem; line-height: 1.85;
-  color: #b09060; margin-bottom: 1.1rem;
+  color: #a8bdd4; margin-bottom: 1.1rem;
 }
 .project-techs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.3rem; }
 .project-tech {
   font-family: var(--SM); font-size: 0.57rem; letter-spacing: 0.06em;
-  color: var(--gold-br); background: rgba(201,146,26,0.07);
-  border: 1px solid rgba(201,146,26,0.2);
+  color: var(--gold-br); background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.22);
   padding: 0.18rem 0.52rem; border-radius: 2px;
 }
 .project-footer {
@@ -725,14 +709,14 @@ nav.scrolled {
   padding: 2.2rem; position: relative; overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.edu-card:hover { border-color: var(--b2); box-shadow: 0 0 50px rgba(201,146,26,0.07); }
+.edu-card:hover { border-color: var(--b2); box-shadow: 0 0 50px rgba(37,99,235,0.09); }
 .edu-card::after {
   content: attr(data-abbr); position: absolute; bottom: -1.5rem; right: 1.2rem;
   font-family: var(--CG); font-size: 7.5rem; font-weight: 700; font-style: italic;
-  color: rgba(201,146,26,0.04); line-height: 1;
+  color: rgba(37,99,235,0.05); line-height: 1;
   pointer-events: none; user-select: none;
 }
-.edu-icon { font-size: 2rem; display: block; margin-bottom: 1rem; filter: drop-shadow(0 0 8px rgba(201,146,26,0.4)); }
+.edu-icon { font-size: 2rem; display: block; margin-bottom: 1rem; filter: drop-shadow(0 0 8px rgba(37,99,235,0.45)); }
 .edu-degree {
   font-family: var(--CG); font-size: 1.45rem; font-weight: 700; font-style: italic;
   margin-bottom: 0.28rem;
@@ -751,14 +735,14 @@ nav.scrolled {
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 0.2rem 0.65rem; border-radius: 2px; margin-bottom: 1.1rem;
 }
-.edu-badge-progress { background: rgba(201,146,26,0.09); color: var(--gold-br); border: 1px solid rgba(201,146,26,0.28); }
-.edu-badge-done     { background: rgba(252,233,168,0.08); color: var(--gold-pale); border: 1px solid rgba(252,233,168,0.25); }
+.edu-badge-progress { background: rgba(37,99,235,0.1); color: var(--gold-br); border: 1px solid rgba(37,99,235,0.3); }
+.edu-badge-done     { background: rgba(45,212,191,0.09); color: var(--gold-pale); border: 1px solid rgba(45,212,191,0.26); }
 .edu-gpa-row { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 1rem; }
 .edu-gpa-num {
   font-family: var(--CG); font-size: 2.9rem; font-weight: 700; font-style: italic;
   background: linear-gradient(135deg, var(--gold-lt), var(--gold));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(201,146,26,0.32));
+  filter: drop-shadow(0 0 10px rgba(37,99,235,0.36));
 }
 .edu-gpa-unit { font-family: var(--SM); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mut); }
 .edu-project-box {
@@ -771,10 +755,10 @@ nav.scrolled {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   margin-bottom: 0.3rem;
 }
-.edu-project-box span { font-family: var(--IN); font-size: 0.87rem; line-height: 1.62; color: #b09060; }
+.edu-project-box span { font-family: var(--IN); font-size: 0.87rem; line-height: 1.62; color: #a8bdd4; }
 
 /* ================================================================
-   CERTIFICATIONS — 3 grouped sections
+   CERTIFICATIONS
 ================================================================ */
 #certifications { background: var(--bg-1); border-top: 1px solid var(--b0); border-bottom: 1px solid var(--b0); }
 
@@ -787,13 +771,13 @@ nav.scrolled {
 }
 .cert-group-diamond {
   font-family: var(--CG); font-size: 1.1rem; font-style: italic;
-  color: var(--gold); filter: drop-shadow(0 0 6px rgba(201,146,26,0.5));
+  color: var(--gold); filter: drop-shadow(0 0 6px rgba(37,99,235,0.55));
 }
 .cert-group-title {
   font-family: var(--CG); font-size: 1.7rem; font-weight: 700; font-style: italic;
   background: linear-gradient(90deg, var(--gold-lt), var(--gold-br));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(201,146,26,0.2));
+  filter: drop-shadow(0 0 10px rgba(37,99,235,0.22));
 }
 .cert-group-sub {
   font-family: var(--SM); font-size: 0.58rem;
@@ -810,16 +794,16 @@ nav.scrolled {
 }
 .cert-card::before {
   content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 2px;
-  background: linear-gradient(180deg, var(--gold-lt), var(--gold), var(--gold-br));
+  background: linear-gradient(180deg, var(--gold-shine), var(--gold-lt), var(--gold-br));
   opacity: 0; transition: opacity 0.3s ease;
 }
-.cert-card:hover { border-color: var(--b2); background: rgba(201,146,26,0.04); box-shadow: 0 10px 30px rgba(201,146,26,0.07); }
+.cert-card:hover { border-color: var(--b2); background: rgba(37,99,235,0.05); box-shadow: 0 10px 30px rgba(37,99,235,0.09); }
 .cert-card:hover::before { opacity: 1; }
 
 .cert-icon-box {
   width: 42px; height: 42px; border: 1px solid var(--b1); border-radius: 2px;
   display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
-  background: rgba(201,146,26,0.07);
+  background: rgba(37,99,235,0.08);
 }
 .cert-name {
   font-family: var(--CG); font-size: 1.05rem; font-weight: 700; font-style: italic;
@@ -839,7 +823,7 @@ nav.scrolled {
 #contact { background: var(--bg-1); border-top: 1px solid var(--b0); position: relative; overflow: hidden; }
 .contact-glow {
   position: absolute; width: 900px; height: 450px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(ellipse, rgba(201,146,26,0.08), transparent 65%);
+  background: radial-gradient(ellipse, rgba(37,99,235,0.1), transparent 65%);
   top: -100px; left: 50%; transform: translateX(-50%);
 }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5.5rem; align-items: start; }
@@ -852,11 +836,11 @@ nav.scrolled {
   margin-bottom: 0.7rem; cursor: pointer;
   transition: all 0.28s ease; background: var(--bg-2);
 }
-.contact-link:hover { border-color: var(--b2); background: rgba(201,146,26,0.05); box-shadow: 0 5px 25px rgba(201,146,26,0.08); }
+.contact-link:hover { border-color: var(--b2); background: rgba(37,99,235,0.06); box-shadow: 0 5px 25px rgba(37,99,235,0.1); }
 .contact-link-icon {
   width: 38px; height: 38px; border: 1px solid var(--b1); border-radius: 2px;
   display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
-  flex-shrink: 0; background: rgba(201,146,26,0.07);
+  flex-shrink: 0; background: rgba(37,99,235,0.08);
 }
 .contact-link-text { font-family: var(--IN); font-size: 0.8rem; color: var(--mut); transition: color 0.2s; }
 .contact-link:hover .contact-link-text { color: var(--gold-pale); }
@@ -876,24 +860,24 @@ nav.scrolled {
   outline: none; transition: all 0.25s ease; width: 100%;
 }
 .form-input:focus, .form-textarea:focus {
-  border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,146,26,0.1);
+  border-color: var(--gold); box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
 }
 .form-input::placeholder, .form-textarea::placeholder { color: var(--dim); }
 .form-textarea { resize: vertical; min-height: 135px; }
 
 .form-submit {
-  background: linear-gradient(135deg, var(--gold-lt), var(--gold), var(--gold-deep));
-  color: #07060f; border: none;
+  background: linear-gradient(135deg, var(--gold-shine), var(--gold-lt), var(--gold), var(--gold-deep));
+  color: #eef6ff; border: none;
   font-family: var(--SM); font-size: 0.7rem;
   letter-spacing: 0.16em; text-transform: uppercase;
   padding: 0.95rem; border-radius: 2px;
   cursor: pointer; font-weight: 700;
-  transition: all 0.28s ease; box-shadow: 0 4px 20px rgba(201,146,26,0.22);
+  transition: all 0.28s ease; box-shadow: 0 4px 20px rgba(37,99,235,0.26);
 }
-.form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(201,146,26,0.4); filter: brightness(1.1); }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(37,99,235,0.45); filter: brightness(1.1); }
 .form-success {
   display: none; text-align: center; padding: 0.9rem;
-  background: rgba(201,146,26,0.08); border: 1px solid rgba(201,146,26,0.28);
+  background: rgba(37,99,235,0.09); border: 1px solid rgba(37,99,235,0.3);
   color: var(--gold-pale); font-family: var(--SM); font-size: 0.7rem;
   letter-spacing: 0.1em; border-radius: 2px;
 }
@@ -909,7 +893,7 @@ footer {
 }
 .footer-name {
   font-family: var(--CG); font-size: 1.15rem; font-weight: 700; font-style: italic;
-  background: linear-gradient(90deg, var(--gold-lt), var(--gold), var(--gold-br));
+  background: linear-gradient(90deg, var(--gold-shine), var(--gold-lt), var(--gold-br));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .footer-links { display: flex; gap: 1.5rem; }
@@ -937,7 +921,7 @@ footer {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .back-to-top.show { opacity: 1; pointer-events: all; }
-.back-to-top:hover { border-color: var(--gold); box-shadow: 0 0 20px rgba(201,146,26,0.32); transform: translateY(-2px); }
+.back-to-top:hover { border-color: var(--gold); box-shadow: 0 0 20px rgba(37,99,235,0.36); transform: translateY(-2px); }
 
 /* ================================================================
    RESPONSIVE
@@ -973,11 +957,11 @@ footer {
     <span>忍</span>
     <span>SC · SIDDHI</span><span>Software Engineer</span><span>Android Developer</span>
     <span>Backend Developer</span><span>UI/UX Designer</span><span>MCA · 8.86 CPI</span>
-    <span>Firebase · Kotlin · Java · Python</span><span>Cybersecurity</span><span>Google Security Engineer</span>
+    <span>Firebase · Kotlin · Java · Python</span><span>React.js · Angular</span><span>Google Security Engineer</span>
     <span>忍</span>
     <span>SC · SIDDHI</span><span>Software Engineer</span><span>Android Developer</span>
     <span>Backend Developer</span><span>UI/UX Designer</span><span>MCA · 8.86 CPI</span>
-    <span>Firebase · Kotlin · Java · Python</span><span>Cybersecurity</span><span>Google Security Engineer</span>
+    <span>Firebase · Kotlin · Java · Python</span><span>React.js · Angular</span><span>Google Security Engineer</span>
   </div>
 </div>
 
@@ -1026,7 +1010,7 @@ footer {
       </div>
 
       <p class="hero-desc">
-        Software Engineer with 4+ years of combined experience in Android development, backend engineering, and UI/UX design, specializing in MVVM architecture, Java, Kotlin, and Python. Experienced in building AI-powered fraud detection systems, real-time REST API pipelines, and game design UI systems with polished HUDs and interactive menu flows.
+        Software Engineer with 5+ years of combined experience in Android development, backend engineering, and UI/UX design, specializing in MVVM architecture, Java, Kotlin, and Python. Experienced in building AI-powered fraud detection systems, real-time REST API pipelines, and game design UI systems with polished HUDs and interactive menu flows.
       </p>
 
       <div class="hero-mission">
@@ -1072,7 +1056,7 @@ footer {
     <div class="s-title">About Me</div>
 
     <div class="about-grid">
-      <!-- LEFT — info panel (no photo, same as reference) -->
+      <!-- LEFT — info panel -->
       <div class="about-left">
         <div class="about-name">Siddhi Chudasama</div>
         <div class="about-role">Software Engineer · Android Developer · Backend Developer</div>
@@ -1097,8 +1081,12 @@ footer {
             <div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div>
           </div>
           <div class="skill-bar-item">
-            <div class="skill-bar-header"><span>Backend / REST APIs</span><span>85%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div>
+            <div class="skill-bar-header"><span>Backend / REST APIs</span><span>86%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-w="86"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span>React.js / Angular</span><span>82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-w="82"></div></div>
           </div>
           <div class="skill-bar-item">
             <div class="skill-bar-header"><span>UI/UX Design</span><span>85%</span></div>
@@ -1114,13 +1102,13 @@ footer {
       <!-- RIGHT — content -->
       <div>
         <div class="s-subhead">Professional Summary</div>
-        <p class="s-para">A <strong>Software Engineer</strong> with 4+ years of combined experience in Android development, backend engineering, and UI/UX design, specializing in <strong>MVVM architecture, Java, Kotlin, and Python</strong>. I bring a rare blend of engineering precision and design intuition — crafting apps that are as reliable as they are beautiful.</p>
+        <p class="s-para">A <strong>Software Engineer</strong> with 5+ years of combined experience in Android development, backend engineering, and UI/UX design, specializing in <strong>MVVM architecture, Java, Kotlin, and Python</strong>. I bring a rare blend of engineering precision and design intuition — crafting apps that are as reliable as they are beautiful.</p>
         <p class="s-para">Experienced in building <strong>AI-powered fraud detection systems, real-time REST API pipelines, and game design UI systems</strong> with polished HUDs and interactive menu flows. Certified in Generative AI, Microsoft AI Agents, and AWS S3 Infrastructure, combining mobile application development with modern AI integration and product design.</p>
 
         <div class="s-subhead">🔥 Key Achievements</div>
         <div class="s-box">
-          <h4>📱 Mobile Engineering Excellence</h4>
-          <p>Architected and shipped production Android applications using <strong>Java, Kotlin, and Firebase</strong> with real-time data synchronization and secure REST API pipelines. Migrated a legacy codebase to <strong>Clean MVVM Architecture</strong>, reducing onboarding time and improving testability.</p>
+          <h4>📱 Mobile &amp; Multi-Platform Engineering</h4>
+          <p>Architected and shipped production Android applications using <strong>Java, Kotlin, and Firebase</strong> with real-time data synchronization and secure REST API pipelines. Migrated a legacy codebase to <strong>Clean MVVM Architecture</strong>, and built responsive web components with <strong>React.js and Angular</strong> to support a unified multi-platform application.</p>
         </div>
         <div class="s-box">
           <h4>🎨 Design-Driven Development</h4>
@@ -1152,13 +1140,19 @@ footer {
         <span class="skill-card-icon">💻</span>
         <div class="skill-card-title">Programming Languages</div>
         <div class="skill-card-desc">Versatile across systems, scripting &amp; application-level languages.</div>
-        <div class="skill-tags"><span class="skill-tag">Java</span><span class="skill-tag">Kotlin</span><span class="skill-tag">Python</span><span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS</span><span class="skill-tag">XML</span></div>
+        <div class="skill-tags"><span class="skill-tag">Java</span><span class="skill-tag">Kotlin</span><span class="skill-tag">Python</span><span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS</span><span class="skill-tag">XML</span><span class="skill-tag">React.js</span><span class="skill-tag">Angular</span></div>
       </div>
       <div class="skill-card reveal">
         <span class="skill-card-icon">📱</span>
         <div class="skill-card-title">Android &amp; Mobile Development</div>
         <div class="skill-card-desc">End-to-end Android apps with real-time backends &amp; secure APIs.</div>
         <div class="skill-tags"><span class="skill-tag">Android SDK</span><span class="skill-tag">Firebase</span><span class="skill-tag">MVVM Architecture</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Clean Architecture</span><span class="skill-tag">Node.js</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-card-icon">🖥️</span>
+        <div class="skill-card-title">Backend &amp; Enterprise Frameworks</div>
+        <div class="skill-card-desc">Server-side frameworks for scalable, distributed systems.</div>
+        <div class="skill-tags"><span class="skill-tag">Spring Boot</span><span class="skill-tag">Hibernate</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">System Design</span><span class="skill-tag">Distributed Systems</span></div>
       </div>
       <div class="skill-card reveal">
         <span class="skill-card-icon">🤖</span>
@@ -1170,19 +1164,13 @@ footer {
         <span class="skill-card-icon">🎨</span>
         <div class="skill-card-title">Design &amp; UX</div>
         <div class="skill-card-desc">Human-centered design from wireframes to high-fidelity prototypes.</div>
-        <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Wireframing</span><span class="skill-tag">Prototyping</span><span class="skill-tag">Material Design 3</span><span class="skill-tag">3D Design</span><span class="skill-tag">GDD</span><span class="skill-tag">HUD Design</span></div>
+        <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Wireframing</span><span class="skill-tag">Prototyping</span><span class="skill-tag">Material Design 3</span><span class="skill-tag">3D Design</span><span class="skill-tag">GDD</span><span class="skill-tag">HUD Design</span><span class="skill-tag">Adobe</span><span class="skill-tag">Photoshop</span></div>
       </div>
       <div class="skill-card reveal">
         <span class="skill-card-icon">⚙️</span>
         <div class="skill-card-title">Tools &amp; Practices</div>
         <div class="skill-card-desc">Industry-standard practices for scalable, maintainable software.</div>
         <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Agile</span><span class="skill-tag">Scrum</span><span class="skill-tag">System Design</span><span class="skill-tag">Cybersecurity</span><span class="skill-tag">AWS S3</span></div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-card-icon">🔐</span>
-        <div class="skill-card-title">Security &amp; Backend</div>
-        <div class="skill-card-desc">Secure workflows with robust authentication &amp; data validation.</div>
-        <div class="skill-tags"><span class="skill-tag">Firebase Auth</span><span class="skill-tag">Idempotency Handling</span><span class="skill-tag">Secure Algorithms</span><span class="skill-tag">Error Handling</span></div>
       </div>
     </div>
   </div>
@@ -1207,6 +1195,7 @@ footer {
             <li>Migrated legacy codebase to <strong>Clean MVVM Architecture</strong>, reducing onboarding time for new engineers and improving overall testability of the codebase.</li>
             <li>Collaborated in <strong>Agile/Scrum sprints</strong> from requirements gathering through release, consistently meeting delivery deadlines across cross-functional teams.</li>
             <li>Led <strong>code reviews and authored technical documentation</strong>, enforcing best practices that improved overall code quality and maintainability.</li>
+            <li>Built responsive <strong>web components and frontend framework configurations using React.js and Angular</strong> to support a unified multi-platform application.</li>
           </ul>
         </div>
       </div>
@@ -1630,7 +1619,7 @@ footer {
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </div>
-  <p class="footer-copy">Designed &amp; Developed with 🥇 by Siddhi Chudasama · © 2025</p>
+  <p class="footer-copy">Designed &amp; Developed with ✨ by Siddhi Chudasama · © 2025</p>
 </footer>
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
